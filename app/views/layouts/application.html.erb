@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECC-Forum</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Boogaloo|Concert+One" rel="stylesheet"> 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<body>
+  
+  <header class="navbar <%= content_for?(:navbar_style) ? yield(:navbar_style) : "navbar-inverse" %> navbar-static-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to root_url, class: "navbar-brand" , id: "logo"  do %>
+        ECC-Forum
+      <% end %>
+    </div>
+
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "THREADS", forum_threads_path, id: "thread" %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li class = "far fa-sun"> <%= link_to "ACCOUNT", edit_user_registration_path, id: "thread" %></li>
+          <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, id: "thread" %></li>
+        <% else %>
+          <li><%= link_to "SIGN UP", new_user_registration_path, id: "thread" %></li>
+          <li><%= link_to "LOG IN", new_user_session_path, id: "thread" %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <div class="background2">
+    <%= flash.notice %>
+    <%= flash.alert %>
+    <%= yield %>
+  </div>
+</body>
+</html>

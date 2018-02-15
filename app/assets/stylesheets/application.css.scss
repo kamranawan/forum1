@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+@import "font-awesome";
+
+@import "bootstrap";
+
+*{
+    font-family: 'Concert One', cursive;
+	color: indigo;
+}
+body {
+	background:moccasin; 
+}
+
+
+.forum_post {
+  border-top: 1px solid #ccc;
+  padding: 5px 0px;
+
+  &:target {
+    background-color: rgb(248, 238, 199);
+    padding: 8px;
+  }
+}
+
+
+
+#logo {
+	color :cornflowerblue;
+	text-transform: uppercase; 
+    font-family: 'Concert One', cursive;
+     font: italic normal bold normal 1.5em/1; 	
+}
+
+
+.background-login {
+	background-image: url(bg-011.JPG);
+	height: 750px;	
+}
+
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+
+#thread{
+	color:cornflowerblue;
+	font-weight : bold;
+}
+
+.background2{
+	background-image: url(bg-04.jpg);
+	height: 750px;
+}
+
+#by-font {
+	font-family: 'Boogaloo', cursive;
+	font-face : 100;
+}
+
+#thread-deco {
+	text-decoration: none ;
+}

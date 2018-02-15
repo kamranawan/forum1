@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @forum_thread.subject %></h1>
+  <p>Created by <b> <%= @forum_thread.user.full_name %> </b> </p>
+  <div class="col-md-2">
+  <%= gravatar_for @forum_thread.user, size: 100%>
+  </div>
+  <%= render @forum_thread.forum_posts %>
+	<%#= gravatar_for @forum_thread.forum_posts.user, size: 100%>
+  <hr />
+  <%= render partial: "forum_posts/form" %>
+</div>
