@@ -1,4 +1,18 @@
-<p id ="thread-deco"> <%= link_to forum_thread do %>
-  <h3 id ="thread-deco"><%= forum_thread.subject %></h3>
+<p class= "pad" > <%= link_to forum_thread do %>
+	<div class="row" >
+		<div class= "col-lg-2"> 
+		  <%= gravatar_for forum_thread.user, size: 100, class: "gravatar" %>
+		</div>	
+		<div class="col-lg-8">
+	   <h3> <span style = "color: white;" ><%= forum_thread.subject %> </span></h3> 
+	   <%= time_ago_in_words forum_thread.created_at %> ago
+	   </div>
+	    
+	   <% if forum_thread.user_id == current_user.id %> 
+	   <%= link_to "Edit", edit_forum_thread_path(forum_thread), class: "btn btn-primary" %> 
+	   <%= link_to "Delete", forum_thread_path(forum_thread), method: :delete, data: {confirrm: "ARE YOU SURE ???"}, class: "btn btn-danger" %> 
+	   <% end %>
+	   
+  </div>
 <% end %>
 </p>

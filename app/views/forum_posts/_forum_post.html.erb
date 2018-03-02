@@ -1,6 +1,17 @@
-<%= div_for (forum_post) do %>
-  <p>Posted by: <b> <%= forum_post.user.full_name %></b> <space> | <%= time_ago_in_words forum_post.created_at %></space> </p> 
-	<p class = "bd-font"><%= forum_post.body %></p> 
+<%= div_for forum_post do %>
+	<div class="row"> 
+		<div class="col-md-2">
+			<%= gravatar_for forum_post.user, size: 70 %>
+		</div>
+		<div class="col-md-8">
+	  <p>Posted by: <b> <%= forum_post.user.full_name %></b> <space> | <%= time_ago_in_words forum_post.created_at %></space> </p>
+		<p class= "pad">  <%= markdown (forum_post.body) %> </p>
+		
+		<%= image_tag forum_post.avatar.url if forum_post.avatar? %>
+		</div>
+	</div> 
 <% end %>
+
+
 
 

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ECC-Forum</title>
+    <title>  NCBA&E | ECC </title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
+    
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
      <link href="https://fonts.googleapis.com/css?family=Boogaloo|Concert+One" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -31,7 +34,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li class = "far fa-sun"> <%= link_to "ACCOUNT", edit_user_registration_path, id: "thread" %></li>
+          <li> <%= link_to "ACCOUNT", edit_user_registration_path, id: "thread" %> </li>
           <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, id: "thread" %></li>
         <% else %>
           <li><%= link_to "SIGN UP", new_user_registration_path, id: "thread" %></li>
@@ -41,10 +44,62 @@
     </nav>
   </div>
 </header>
-  <div class="background2">
+<section>
+  <div class="background2 ", id="by-font">
     <%= flash.notice %>
     <%= flash.alert %>
     <%= yield %>
+    <br><br>
   </div>
+</section>
+
+
+ <footer>
+    <div class="container">
+      <div class="col-md-3" >
+        <h3> <b>About us </b></h3>
+        <h4>
+          National College Of Business and Economics, East Canal Campus, Lahore. 
+        </h4>  
+        <h4>
+          Chartered By Government Of Punjab, and Recognized By HEC "W" Category University
+        </h4>
+        <ul>
+          <br>
+          <li> <h5> NCBA&E-ECC &#169; 2018  </h5> </li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+       <br>
+       <a target="_blank" href="http://www.ncbae.edu.pk/">
+         <%= image_tag("logo-1img.png")%></a>
+
+      </div>
+      <div class="col-md-4" >
+           <h3> <b> Contact Us </b></h3>
+          <ul>
+              <li><h4>Phone : 0423-6525804</h4></li>
+              <li><h4>Phone : 0320-5555975</h4></li>
+              <li><h4>E-mail : ncba.ecc@yahoo.com</h4></li>
+              <li> Address: 
+                      NCBA&E, ECC, Mian Aziz Garden, Main Canal Road, Khaira Pull, Batapur Lahore.  </li>
+          </ul>
+          
+          <ul class="sm">
+              <li><a target="_blank" href="https://www.facebook.com/NCBAE2/" ><img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive"></a></li>
+              <li><a href="#" ><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" class="img-responsive" ></a></li>
+              <li><a href="#" ><img src="http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive"  ></a></li>
+          </ul>
+      </div> 
+      <div class="col-md-3">
+          <h3> <b>Our Location </b> </h3>
+          <a target="_blank" href="https://www.google.com/maps/place/National+College+of+Business+Administration+%26+Economics/@31.5824274,74.4938062,14z/data=!4m5!3m4!1s0x39191200231748df:0x74f2fccdc07e91e2!8m2!3d31.5822554!4d74.5007801"> <%= image_tag("map1.png")%> </a> 
+         
+          <!-- <img src="images/map.png" alt="map" style = "height: 300px;"> -->
+      </div>
+  </div>
+</footer>
+
+  
 </body>
 </html>

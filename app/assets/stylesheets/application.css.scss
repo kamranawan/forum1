@@ -10,38 +10,44 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *
+ 
  *= require_self
- *= require font-awesome
+ 
  */
 
-@import "font-awesome";
 
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-*{
+
+header{
     font-family: 'Concert One', cursive;
-	color: indigo;
+	color: white;
 }
-body {
-	background:moccasin; 
+
+html,body {
+	
+	height: 100%;
+
 }
 
 
 .forum_post {
-  border-top: 1px solid #ccc;
-  padding: 5px 0px;
+  border-top: 1px solid #696969 ;
+  padding: 5px 5px 5px 5px;
 
   &:target {
     background-color: rgb(248, 238, 199);
-    padding: 8px;
+    padding: 8px 20px 2px 20px;
   }
 }
 
 
 
 #logo {
-	color :cornflowerblue;
+	color :white;
 	text-transform: uppercase; 
     font-family: 'Concert One', cursive;
      font: italic normal bold normal 1.5em/1; 	
@@ -50,7 +56,8 @@ body {
 
 .background-login {
 	background-image: url(bg-011.JPG);
-	height: 750px;	
+
+    height: 750px;
 }
 
 
@@ -60,20 +67,123 @@ body {
 
 
 #thread{
-	color:cornflowerblue;
+	color:white;
 	font-weight : bold;
 }
 
 .background2{
-	background-image: url(bg-04.jpg);
-	height: 750px;
+	
+	background-color: darkgray;
+
 }
 
 #by-font {
-	font-family: 'Boogaloo', cursive;
+    font-family: 'Concert One', cursive;
 	font-face : 100;
+	text-decoration: none;
+    font-size: 15px;
 }
 
 #thread-deco {
 	text-decoration: none ;
+
+	&:a {color: black;
 }
+}
+
+.pad{
+  text-decoration: none;
+	padding-left: 15%;
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	font-weight: bold;
+	line-height: 32px;
+
+}
+
+.pad1{
+	padding-left: 10%;
+	color:brown;
+}
+
+
+.gravatar{
+	border-radius: 50px;
+}
+
+footer {
+    background-color:#696969 ;
+    width: 100%;
+    
+    font-weight: lighter;
+    color: white;
+    clear: both;
+    
+    position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+
+}
+.footerHeader{
+    width:100%;
+    padding:1em;
+    background-color:black;
+    text-align:center;
+    color:white;
+}
+footer h3{
+    font-weight:lighter;
+}
+footer ul{
+    padding-left:5px;
+    list-style:none;
+}
+footer p{
+    text-align : justify;
+    font-size : 12px;
+}
+footer iframe {
+    width:100%;
+    position:relative;
+    height:170px;
+}
+.sm{
+    list-style:none;
+    overflow:auto;
+}
+.sm li {
+    display: inline;
+    padding:5px;
+    float:left;
+} 
+.sm li a img {
+    width:32px;
+}
+
+footer {
+    font-family: 'Boogaloo', cursive;
+    font-face : 150;
+    text-decoration: none;
+}
+
+.tails {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 300px !important;
+}
+
+.glyphicon-envelope {
+  font-size: 50px; 
+}
+
+
+.active {
+    background: black;
+    color: white;
+  }
+
+
