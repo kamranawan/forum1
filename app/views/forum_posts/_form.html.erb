@@ -1,20 +1,23 @@
-<%= form_for [@forum_thread, @forum_post] do |f| %>
-  <div class="form-group">
-    <%= f.text_area :body, placeholder: "Add a comment", rows: 10, class: "form-control" %>
-  </div>
-  <div class="row">
-  	<div class="col-lg-2">
-  		<div class="form-group">
-		    <%= f.submit class: "btn btn-primary" %>
-		  </div>
-		</div>
-  	<div class="col-lg-2">
-			<div class="form-group">
-				<%= f.file_field :avatar %>
-		    <%= f.hidden_field :avatar_cache %>
+<br><br>
+
+<div class="container">
+
+	<%= form_for [@forum_thread, @forum_post] do |f| %>
+	  <div class="form-group">
+	    <%= f.text_area :body, placeholder: "Add a comment", rows: 10, class: "form-control" %>
+	  </div>
+	  <div class="row">
+	  	<div class="col-lg-2">
+	  		<div class="form-group">
+			    <%= f.submit class: "btn btn-primary" %>
+				</div>
+			</div>
+	  	<div class="col-lg-2">
+				<div class="form-group">
+					<%= f.file_field :avatar %>
+			    <%= f.hidden_field :avatar_cache %>
+				</div>
 			</div>
 		</div>
-			
-		  
-	</div>
-<% end %>
+	<% end %>
+</div>

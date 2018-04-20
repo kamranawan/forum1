@@ -1,17 +1,25 @@
-<%= div_for forum_post do %>
-	<div class="row"> 
-		<div class="col-md-2">
-			<%= gravatar_for forum_post.user, size: 70 %>
-		</div>
-		<div class="col-md-8">
-	  <p>Posted by: <b> <%= forum_post.user.full_name %></b> <space> | <%= time_ago_in_words forum_post.created_at %></space> </p>
-		<p class= "pad">  <%= markdown (forum_post.body) %> </p>
-		
-		<%= image_tag forum_post.avatar.url if forum_post.avatar? %>
-		</div>
-	</div> 
-<% end %>
 
-
-
+<div class="page__demo">
+    <div class="main-container page__container">
+      <div class="timeline">
+        <div class="timeline__group">
+        	<%= div_for forum_post do %>
+          <span class="timeline__year"> <%= forum_post.created_at.year %></span>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <%= gravatar_for forum_post.user, size: 70 %>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+              	<b> <%=time_ago_in_words forum_post.created_at %> ago</b> 
+									<p> <%= markdown (forum_post.body)%> </p>
+								<%= image_tag forum_post.avatar.url if forum_post.avatar? %>
+							<% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
