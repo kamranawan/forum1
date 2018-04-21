@@ -4,8 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-
+ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
@@ -38,7 +37,6 @@ gem 'ransack', '~> 1.8', '>= 1.8.7'
 # gem 'html-pipeline', '~> 2.7', '>= 2.7.1'
 # gem 'gemoji', '~> 3.0'
 # gem 'github-markdown', '~> 0.6.9'
-gem 'record_tag_helper', '~> 1.0'
 # gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 gem 'font-awesome-sass', '~> 5.0', '>= 5.0.6.2'
 # gem 'coderay', '~> 1.1', '>= 1.1.2'
@@ -73,8 +71,7 @@ end
 group :production do 
   gem 'pg'
   gem 'rails_12factors'
-
-  end 
+end 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
