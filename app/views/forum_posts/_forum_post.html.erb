@@ -15,6 +15,11 @@
 									<p> <%= markdown (forum_post.body)%> </p>
 								<%= image_tag forum_post.avatar.url if forum_post.avatar? %>
 							<% end %>
+              <div class="pull-right">
+                <%= link_to "" do%>
+                  <i class="far fa-thumbs-up"></i>
+                <% end %>
+              </div>
               </div>
             </div>
           </div>

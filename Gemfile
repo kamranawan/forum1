@@ -48,6 +48,8 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 # gem 'activeadmin', '~> 0.6.6'
 gem 'activeadmin'
 gem 'arctic_admin'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'bootstrap-glyphicons', '~> 0.0.1'
 # gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 # gem 'capistrano-rails', group: :development
 
