@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Arvo|Marck+Script|Open+Sans+Condensed:300|PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
@@ -14,12 +17,13 @@
     <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Boogaloo|Concert+One" rel="stylesheet"> 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 <body>
   
-<header class="navbar <%= content_for?(:navbar_style) ? yield(:navbar_style) : "navbar-inverse" %> navbar-static-top" role="banner">
+<header class="navbar <%= content_for?(:navbar_style) ? yield(:navbar_style) : "navbar-inverse" %> navbar-fixed-top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -62,10 +66,7 @@
       <div class="col-md-3" >
         <h3> <b>About us </b></h3>
         <h4>
-          National College Of Business and Economics, East Canal Campus, Lahore. 
-        </h4>  
-        <h4>
-          Chartered By Government Of Punjab, and Recognized By HEC "W" Category University
+          The National college Of Business Administration & Economics, Lahore got the charter form the Government Of Punjab in 2002, as a degree awarding institution by Higher Education Commission (HEC) of Pakistan.
         </h4>
         <ul>
           <br>
@@ -74,7 +75,7 @@
       </div>
       <div class="col-md-2">
        <br>
-       <a target="_blank" href="http://www.ncbae.edu.pk/">
+       <a id="footer-logo" target="_blank" href="http://www.ncbae.edu.pk/">
          <%= image_tag("logo-1img.png")%></a>
 
       </div>
